@@ -1,0 +1,26 @@
+{
+  "name": "gulp-osws-templates",
+  "version": "0.0.0",
+  "description": "OSWS Templates gulp plugin",
+  "keywords": [],
+  "author": "Open Source Web Standards <opensourcewebstandards@gmail.com> (http://osws.github.io/OSWS)",
+  "bugs": {
+    "url": "https://github.com/ivansglazunov/gulp-osws-templates/issues",
+    "email": "ivansglazunov@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivansglazunov/gulp-osws-templates"
+  },
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "osws-templates": "^0.2.5"
+  },
+  "devDependencies": {
+    "mocha": "2.1.0",
+    "gulp": "3.8.10",
+    "gulp-util": "^3.0.2",
+    "through2": "^0.6.3"
+  }
+}
