@@ -6,9 +6,10 @@ var gutil = require('gulp-util');
 var name = 'gulp-osws-templates';
 
 module.exports = function(options){
-	var options = _.defaults(options, module.exports.options);
+	var options = _.defaults(_.isObject(options)? object : {}, module.exports.options);
 	
 	return through.obj(function(file, enc, callback){
+		
 		var flow = this;
 		
 		if (file.isNull()) {
