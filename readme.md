@@ -1,4 +1,4 @@
-# [OSWS](https://github.com/OSWS) [Templates](https://github.com/OSWS/OSWS-Templates) gulp plugin 0.0.2
+# [OSWS](https://github.com/OSWS) [Templates](https://github.com/OSWS/OSWS-Templates) gulp plugin 0.0.3
 
 [gulp](gulpjs.com)-[osws](https://github.com/OSWS)-[templates](https://github.com/OSWS/OSWS-Templates)
 
