@@ -1,1 +1,9 @@
-var T = require('osws-templates');module.exports = T.with.mixin(function(a){return T.with.content(1, a, '<%= b %>');});
+var T = require('osws-templates');
+
+with (T.with) {
+
+module.exports = mixin(function(a){
+    return content(1, a, '<%= b %>');
+});
+
+}

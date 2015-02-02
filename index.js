@@ -24,7 +24,7 @@ module.exports = function(options){
 		} else if(file.isBuffer()){
 			try {
 				options.handler(
-					Templates.includeString(String(file.contents), file.path),
+					Templates.compile(String(file.contents), file.path),
 					options,
 					file,
 					function(result) {
@@ -49,7 +49,8 @@ module.exports.options = {
 	arguments: [],
 	context: {},
 	handler: function(template, options, file, callback) {
-		template.apply(null, options.arguments)
+		Templates.Module(template)
+		.apply(null, options.arguments)
 		.render(options.context, function(result) {
 			callback(result);
 		})
