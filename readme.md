@@ -1,4 +1,4 @@
-# [OSWS](https://github.com/OSWS) [Templates](https://github.com/OSWS/OSWS-Templates) gulp plugin 0.0.7
+# [OSWS](https://github.com/OSWS) [Templates](https://github.com/OSWS/OSWS-Templates) gulp plugin 0.0.8
 
 [gulp](gulpjs.com)-[osws](https://github.com/OSWS)-[templates](https://github.com/OSWS/OSWS-Templates)
 
@@ -6,7 +6,7 @@
 [![npm version](https://badge.fury.io/js/gulp-osws-templates.svg)](http://badge.fury.io/js/gulp-osws-templates)
 [![Build Status](https://travis-ci.org/ivansglazunov/gulp-osws-templates.svg)](https://travis-ci.org/ivansglazunov/gulp-osws-templates)
 
-For [osws-templates@0.2.5](https://github.com/OSWS/OSWS-Templates/releases/tag/0.2.7).
+For [osws-templates@0.2.5](https://github.com/OSWS/OSWS-Templates/releases/tag/0.2.8).
 
 ## Usage
 
@@ -40,7 +40,7 @@ gulp.task('templates', function() {
 ## Options
 
 ### context
-> { [name: string]: [Templates.IContext](https://github.com/OSWS/OSWS-Templates/wiki/0.2.7-interfaces-IContext) };
+> { [name: string]: [Templates.IContext](https://github.com/OSWS/OSWS-Templates/wiki/0.2.8-interfaces-IContext) };
 
 ### arguments
 > Array<any>;
@@ -72,7 +72,8 @@ gulp.task('templates', function() {
         
         // default handler
         handler: function(template, options, file, callback) {
-    		template.apply(null, options.arguments)
+    		Templates.Module(template)
+    		.apply(null, options.arguments)
     		.render(options.context, function(result) {
     			callback(result);
     		})
