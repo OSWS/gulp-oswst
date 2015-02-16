@@ -27,7 +27,7 @@ module.exports = function(options){
 					Templates.compile(String(file.contents), file.path),
 					options,
 					file,
-					function(result) {
+					function(error, result) {
 						file.contents = new Buffer(result);
 						file.path = gutil.replaceExtension(file.path, '.html');
 						flow.push(file);
@@ -51,8 +51,6 @@ module.exports.options = {
 	handler: function(template, options, file, callback) {
 		Templates.Module(template)
 		.apply(null, options.arguments)
-		.render(options.context, function(result) {
-			callback(result);
-		})
+		.render(callback, options.context);
 	}
 };

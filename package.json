@@ -1,6 +1,6 @@
 {
   "name": "gulp-osws-templates",
-  "version": "0.0.11",
+  "version": "0.3.0",
   "description": "OSWS Templates gulp plugin",
   "keywords": [],
   "author": "Open Source Web Standards <opensourcewebstandards@gmail.com> (http://osws.github.io/OSWS)",
@@ -16,7 +16,7 @@
   "dependencies": {
     "chai": "^1.10.0",
     "lodash": "^2.4.1",
-    "osws-templates": "^0.2.8",
+    "osws-templates": "git://github.com/OSWS/OSWS-Templates.git#0.3.0",
     "through2": "^0.6.3",
     "gulp-util": "^3.0.2"
   },

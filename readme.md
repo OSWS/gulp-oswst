@@ -1,4 +1,4 @@
-# [OSWS](https://github.com/OSWS) [Templates](https://github.com/OSWS/OSWS-Templates) gulp plugin 0.0.11
+# [OSWS](https://github.com/OSWS) [Templates](https://github.com/OSWS/OSWS-Templates) gulp plugin 0.3.0
 
 [gulp](gulpjs.com)-[osws](https://github.com/OSWS)-[templates](https://github.com/OSWS/OSWS-Templates)
 
@@ -6,7 +6,7 @@
 [![npm version](https://badge.fury.io/js/gulp-osws-templates.svg)](http://badge.fury.io/js/gulp-osws-templates)
 [![Build Status](https://travis-ci.org/OSWS/gulp-osws-templates.svg)](https://travis-ci.org/OSWS/gulp-osws-templates)
 
-For [osws-templates@0.2.5](https://github.com/OSWS/OSWS-Templates/releases/tag/0.2.8).
+For [osws-templates@0.3.0](https://github.com/OSWS/OSWS-Templates/releases/tag/0.3.0).
 
 ## Usage
 
@@ -37,16 +37,16 @@ gulp.task('templates', function() {
 <div>OSWS</div>
 ```
 
-## Options
+## TOptions
 
 ### context
-> { [name: string]: [Templates.IContext](https://github.com/OSWS/OSWS-Templates/wiki/0.2.8-interfaces-IContext) };
+> { [name: string]: [Templates.TContext](https://github.com/OSWS/OSWS-Templates/wiki/0.3.0-TContext) };
 
 ### arguments
 > Array<any>;
 
 ### handler
-> (template: Function, options: IOptions, file: [GulpFile](https://github.com/gulpjs/gulp-util#new-fileobj), callback: (result: string) => void)
+> (template: Function, options: [TOptions](#toptions), file: [GulpFile](https://github.com/gulpjs/gulp-util#new-fileobj), callback: (result: string) => void)
 
 Handle any file.
 
@@ -74,9 +74,7 @@ gulp.task('templates', function() {
         handler: function(template, options, file, callback) {
     		Templates.Module(template)
     		.apply(null, options.arguments)
-    		.render(options.context, function(result) {
-    			callback(result);
-    		})
+    		.render(callback, options.context);
         }
     }))
     .pipe(gulp.dest('./'));
