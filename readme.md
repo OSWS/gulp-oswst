@@ -6,7 +6,7 @@
 [![npm version](https://badge.fury.io/js/gulp-oswst.svg)](http://badge.fury.io/js/gulp-oswst)
 [![Build Status](https://travis-ci.org/OSWS/gulp-oswst.svg)](https://travis-ci.org/OSWS/gulp-oswst)
 
-For [osws-templates@0.3.0](https://github.com/OSWS/OSWS-Templates/releases/tag/0.3.0).
+For [oswst@0.3.0](https://github.com/OSWS/Templates/releases/tag/0.3.0).
 
 ## Usage
 
