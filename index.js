@@ -1,9 +1,9 @@
-var Templates = require('osws-templates');
+var Templates = require('oswst');
 var _ = require('lodash');
 var through = require('through2');
 var gutil = require('gulp-util');
 
-var name = 'gulp-osws-templates';
+var name = 'gulp-oswst';
 
 module.exports = function(options){
 	var options = _.defaults(_.isObject(options)? options : {}, module.exports.options);
@@ -27,7 +27,7 @@ module.exports = function(options){
 					Templates.compile(String(file.contents), file.path),
 					options,
 					file,
-					function(result) {
+					function(error, result) {
 						file.contents = new Buffer(result);
 						file.path = gutil.replaceExtension(file.path, '.html');
 						flow.push(file);
@@ -51,8 +51,6 @@ module.exports.options = {
 	handler: function(template, options, file, callback) {
 		Templates.Module(template)
 		.apply(null, options.arguments)
-		.render(options.context, function(result) {
-			callback(result);
-		})
+		.render(callback, options.context);
 	}
 };
