@@ -1,6 +1,6 @@
-# [OSWS](https://github.com/OSWS) [Templates](https://github.com/OSWS/OSWS-Templates) gulp plugin 0.3.0
+# [OSWS](https://github.com/OSWS) [Templates](https://github.com/OSWS/Templates) gulp plugin 0.3.0
 
-[gulp](gulpjs.com)-[osws](https://github.com/OSWS)-[templates](https://github.com/OSWS/OSWS-Templates)
+[gulp](gulpjs.com)-[osws](https://github.com/OSWS)-[templates](https://github.com/OSWS/Templates)
 
 [![GitHub version](https://badge.fury.io/gh/OSWS%2Fgulp-oswst.svg)](http://badge.fury.io/gh/OSWS%2Fgulp-oswst)
 [![npm version](https://badge.fury.io/js/gulp-oswst.svg)](http://badge.fury.io/js/gulp-oswst)
@@ -40,7 +40,7 @@ gulp.task('templates', function() {
 ## TOptions
 
 ### context
-> { [name: string]: [TContext](https://github.com/OSWS/OSWS-Templates/wiki/0.3.0-TContext) };
+> { [name: string]: [TContext](https://github.com/OSWS/Templates/wiki/0.3.0-TContext) };
 
 ### arguments
 > Array<any>;
