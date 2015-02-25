@@ -1,3 +1,5 @@
+require('coffee-script');
+
 var gulp = require('gulp');
 var oswst = require('./index.js');
 var through = require('through2');
